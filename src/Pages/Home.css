@@ -35,3 +35,9 @@
   font-family: 'Scheherazade New', serif;
   font-weight: 100;
 }
+.city, .title, .Description {
+  font-family: 'Scheherazade New', serif;
+  font-weight: 100;
+  color: #fff;
+  margin: 0;
+}
