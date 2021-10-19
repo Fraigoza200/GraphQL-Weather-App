@@ -18,13 +18,14 @@ function Home() {
     <div className="home">
       <h1 className="heading">Search for Weather</h1>
       <input
+      className="input"
         type="text"
         placeholder="Enter City Name"
         onChange={(event) => {
           setInput(event.target.value);
         }}
       />
-      <button onClick={() => getWeather()}>Search</button>
+      <button className="btn" onClick={() => getWeather()}>Search</button>
       <div className="weather">
         {data && (
           <>
