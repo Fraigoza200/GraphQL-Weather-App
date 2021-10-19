@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import './Home.css'
 import { useLazyQuery } from '@apollo/client';
 import { GET_WEATHER_QUERY } from '../graphql/Queries';
+
 
 function Home() {
   const [input, setInput] = useState('');
@@ -14,7 +16,7 @@ function Home() {
   }
   return (
     <div className="home">
-      <h1>Search for Weather</h1>
+      <h1 className="heading">Search for Weather</h1>
       <input
         type="text"
         placeholder="Enter City Name"
@@ -26,9 +28,9 @@ function Home() {
       <div className="weather">
         {data && (
           <>
-            <h1>{data.getCityByName.name}</h1>
-            <h1>Description: {data.getCityByName.weather.summary.description}</h1>
-            <h1>{data.getCityByName.weather.summary.title}</h1>
+            <h1 className="city">{data.getCityByName.name}</h1>
+            <h1 className="title">{data.getCityByName.weather.summary.title}</h1>
+            <h1 className="Description">Description: {data.getCityByName.weather.summary.description}</h1>
           </>
         )}
       </div>

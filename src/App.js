@@ -8,9 +8,11 @@ function App() {
     uri: `https://graphql-weather-api.herokuapp.com/`
   })
   return (
+    <div className="main">
     <ApolloProvider client={client}>
      <Home />
     </ApolloProvider>
+    </div>
   );
 }
 
